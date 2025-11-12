@@ -17,7 +17,7 @@ spring:
     enabled: false   # disable to avoid Unsupported Database error and unblock startup
 
 server:
-  port: ${SERVER_PORT:8080}
+  port: ${PORT:8080}
 
 jwt:
   secret: ${JWT_SECRET:change_this_to_a_long_random_secret_string_at_least_32_chars}
