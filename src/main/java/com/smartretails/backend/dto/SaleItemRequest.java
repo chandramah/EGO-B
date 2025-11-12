@@ -1,0 +1,22 @@
+package com.smartretails.backend.dto;
+
+import java.math.BigDecimal;
+
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+import lombok.Data;
+
+@Data
+public class SaleItemRequest {
+
+    @NotNull
+    private Long productId;
+
+    @NotNull
+    @Min(1)
+    private Integer quantity;
+
+    private BigDecimal unitPrice;
+
+    private BigDecimal taxRate;
+}

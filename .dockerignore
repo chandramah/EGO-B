@@ -1,0 +1,28 @@
+# Docker ignore file to keep image small
+
+# VCS
+.git
+.gitignore
+
+# IDEs
+.vscode
+.idea
+*.iml
+
+# Build outputs
+/target
+/build
+
+# Maven caches (not needed in context)
+.mvn/
+.mvnw
+mvnw.cmd
+
+# Node, Python, etc. (in case)
+node_modules
+__pycache__
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
