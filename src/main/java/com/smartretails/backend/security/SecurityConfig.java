@@ -54,10 +54,11 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource())) // ✅ Enable CORS
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
+                        
                         // 🔓 Authentication APIs
                         .requestMatchers("/auth/login").permitAll()
                         .requestMatchers("/auth/signup").hasRole("ADMIN")
-
+                        .requestMatchers("/", "/health", "/actuator/health").permitAll()
                         // 🛍️ Product APIs
                         .requestMatchers(HttpMethod.GET, "/api/products/search-products", "/api/products/{id}")
                         .hasAnyRole("ADMIN", "MANAGER", "CASHIER")
