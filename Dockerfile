@@ -26,8 +26,6 @@ COPY --from=build /app/target/*.jar app.jar
 
 # Application runtime configuration via environment
 ENV JAVA_OPTS=""
-ENV SERVER_PORT=8080
-EXPOSE 8080
 
 # Health-friendly, graceful signals
 STOPSIGNAL SIGTERM
