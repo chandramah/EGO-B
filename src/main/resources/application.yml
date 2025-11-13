@@ -18,6 +18,7 @@ spring:
     enabled: false   # disable to avoid Unsupported Database error and unblock startup
 
 server:
+  address: 0.0.0.0
   port: ${PORT}
 
 jwt:
